@@ -142,6 +142,10 @@ func (im iconMap) get(f *file) string {
 		return val
 	}
 
+	if val, ok := im[f.path+"*"]; ok {
+		return val
+	}
+
 	if val, ok := im[f.Name()+"*"]; ok {
 		return val
 	}
