@@ -501,8 +501,7 @@ func (win *win) printDir(ui *ui, dir *dir, context *dirContext, dirStyle *dirSty
 		win.print(ui.screen, lnwidth+1, i, st, styledFilename)
 
 		if icon.hasStyle && i != dir.pos {
-			win.print(ui.screen, lnwidth+2, i, icon.style, icon.icon)
-			win.print(ui.screen, lnwidth+3, i, icon.style, " ") // this fixes an issue in windows terminal with icon colors being cut off
+			win.print(ui.screen, lnwidth+2, i, icon.style, icon.icon+" ")
 		}
 
 		tag, ok := context.tags[path]

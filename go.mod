@@ -1,4 +1,4 @@
-module github.com/gokcehan/lf
+module github.com/BPplays/lf
 
 go 1.18
 
