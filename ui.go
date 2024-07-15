@@ -501,7 +501,7 @@ func (win *win) printDir(ui *ui, dir *dir, context *dirContext, dirStyle *dirSty
 		win.print(ui.screen, lnwidth+1, i, st, styledFilename)
 
 		if icon.hasStyle && i != dir.pos {
-			win.print(ui.screen, lnwidth+2, i, icon.style, "  ")
+			win.print(ui.screen, lnwidth+2, i, icon.style, icon.icon+" ")
 		}
 
 		tag, ok := context.tags[path]
